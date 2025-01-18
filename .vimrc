@@ -74,8 +74,8 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 " ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
+"inoremap <Left>  <ESC>:echoe /"Use h"<CR>
+"inoremap <Right> <ESC>:echoe /"Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Tab键的宽度
@@ -88,7 +88,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " config the key mapping
 inoremap jk <ESC>
-inoremap ( ()<ESC>ha
+inoremap ( ()
 inoremap [ []<ESC>ha
 inoremap { {}<ESC>ha
 inoremap < <><ESC>ha

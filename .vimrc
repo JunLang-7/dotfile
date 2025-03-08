@@ -78,23 +78,33 @@ nnoremap <Down>  :echoe "Use j"<CR>
 "inoremap <Right> <ESC>:echoe /"Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
 " Tab键的宽度
 set tabstop=4
 " 统一缩进为4
 set softtabstop=4
 set shiftwidth=4
+set expandtab
+
+set autoindent
+
 " config the <ESC> with jk
 inoremap jk <ESC>
+
+" 针对 Makefile 文件类型禁用 expandtab
+autocmd FileType make setlocal noexpandtab
+
 " config the CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
 " 设置括号自动补齐
 inoremap ( ()<LEFT>
 inoremap [ []<LEFT>
 inoremap { {}<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
-inoremap < <><LEFT>
+
 " 自动删除括号
 function! RemovePairs()
     let s:line = getline(".")
